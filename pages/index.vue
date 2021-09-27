@@ -1,6 +1,6 @@
 <template lang='pug'>
-article.flex.justify-center.align-center.h-screen
-  .table-container(class='w-full h-full md:w-2/3 md:h-2/3 m-auto')
+article.h-full
+  .table-container
     table
       thead
         tr
@@ -37,7 +37,7 @@ export default {
 
 <style lang='postcss' scoped>
 .table-container {
-  @apply overflow-auto;
+  @apply w-full h-full overflow-auto;
 
   & table {
     @apply table w-full h-full;
