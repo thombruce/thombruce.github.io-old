@@ -7,7 +7,8 @@ article.h-full
           th Name
           th Description
           th Language
-          th Git
+          th.text-center Git
+          th.text-center Issues
       tbody
         tr(v-for='(repo, i) in repos')
           th
@@ -15,16 +16,33 @@ article.h-full
             span(v-else) {{ repo.name }}
           td {{ repo.description }}
           td {{ repo.language }}
-          td
-            a(:href='repo.html_url') {{ repo.full_name }}
+          td.text-center
+            a.text-lg(:href='repo.html_url')
+              fa(:icon='faCodeBranch')
+          td.text-center
+            a.text-lg(:href="repo.html_url + '/issues'")
+              .indicator
+                .indicator-item.badge.badge-error {{ repo.open_issues_count }}
+                fa(:icon='faBug')
 </template>
 
 <script>
+import { faCodeBranch, faBug } from '@fortawesome/free-solid-svg-icons'
+
 export default {
   async asyncData ({ $axios }) {
     const repos = await $axios.$get('https://api.github.com/users/thombruce/repos?per_page=100&type=public&sort=updated')
     
     return { repos }
+  },
+
+  computed: {
+    faCodeBranch () {
+       return faCodeBranch
+    },
+    faBug () {
+      return faBug
+    }
   },
 
   head () {
