@@ -36,6 +36,10 @@ export default {
     return { repos }
   },
 
+  async created () {
+    this.repos = await this.$axios.$get('https://api.github.com/users/thombruce/repos?per_page=100&type=public&sort=updated')
+  },
+
   computed: {
     faCodeBranch () {
        return faCodeBranch
