@@ -1499,10 +1499,10 @@
   dependencies:
     lodash "^4.17.21"
 
-"@thombruce/nuxt-tnt@^0.1.25":
-  version "0.1.25"
-  resolved "https://registry.yarnpkg.com/@thombruce/nuxt-tnt/-/nuxt-tnt-0.1.25.tgz#6cd83cd33f104dd869653ebf3d777d5382ce17e3"
-  integrity sha512-lx5igNZ+uIsNEjwipxDiDUueca2GWVOrc4rJnyCm4E9IX7XyprNNFC4MoapBmaeKms3oZWUTe+yNoLHnR1mOVg==
+"@thombruce/nuxt-tnt@^0.1.26":
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/@thombruce/nuxt-tnt/-/nuxt-tnt-0.1.26.tgz#aef950f3ad16fd1d4b44ed0e2a57a802b263c00d"
+  integrity sha512-IeeoPF8gSEhRHhLSD/gkE+J+qW7o5HxWMnEJFPMDAd3ho7+ZmXI2V1zB84wreb5u5nOVUnXba0h7qzAC19+Zkw==
   dependencies:
     "@nuxt/image" "^0.5.0"
     "@nuxtjs/tailwindcss" "^4.1.3"
